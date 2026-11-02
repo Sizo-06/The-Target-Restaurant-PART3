@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Gallery | THE TARGET</title>
+		<link rel="stylesheet" href="styles.css">
+		<!-- Lightbox CSS --> 
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+
+		<!-- jQuery --> 
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+
+		<!-- Lightbox JavaScript --> 
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+		<script src="myScript.js"></script>
+
+	</head>
+
+	<body>
+	
+		<div id="wrapper">
+	  
+		  <header>
+		  	<img src="_images/mog-hub_logo.png" alt="Logo for Mog Hub">
+			<nav id="topLinks">
+			  <ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About Us</a></li>
+				<li><a href="services.html">services</a></li>
+				<li class="contact.html">contact</li>
+				<li><a href="enquiries.html">enquiries</a></li>
+			  </ul>
+			</nav>
+		  </header>
+		  
+		  <main id="gallery">
+			<h1>Gallery</h1>
+			<article id="col1">
+				<a href="_images/Catering.jpg LARGE" data-lightbox="gallery"data-title="Food Catering">
+				<img src="_images/Catering.jpg" alt="Food Catering">
+				</a>
+				
+				<img src="_images/Delivery.jpg large" alt="Food Delivery">
+				
+			</article>
+			<article id="col2">
+				<img src="_images/Dine in (2).jpg" alt="Our dine in">
+				
+				<img src="_images/Catering.jpg" alt="Our Catering">
+				
+			</article>
+			<article id="col3">
+				<img src="_images/Delivery.jpg" alt="Our Delivery">
+				<figcaption>Delivery</figcaption>
+				<img src="_images/Dine in (2).jpg" alt="Dine in">
+				<figcaption>dine-in</figcaption>
+			</article>
+			<br class="clearFix">
+		  </main>
+		  
+		  <footer>
+			<nav id="bottomLinks">
+			  <ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="enquiries.html">enquiries</a></li>
+				<li><a href="services.html">service</a></li>
+				<li class="About.html">About Us</li>
+				<li><a href="contact.html">contact</a></li>
+			  </ul>
+			</nav>
+			<p>
+				&copy; The Target 2026 | Powered by "Sizophila" Web Hosting
+			</p>
+		  </footer>
+		  
+		</div>
+		
+	</body>
+	
+</html>
+<style>
+.gallery{display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px;}
+.gallery img{width:100%; cursor:pointer; border-radius:8px; transition:0.3s}
+.gallery img:hover{transform:scale(1.05)}
+#lightbox{display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); justify-content:center; align-items:center; z-index:999;}
+#lightbox img{max-width:100%; max-height:100%;}
+</style>
+<div class="gallery">
+  <img src="_images/Catering.jpg" alt="catery from The Target" class="g-img">
+  <img src="_images/Delivery.jpg" alt="Food Delivery at The Target" class="g-img">
+  <img src="_images/Dine in (2).jpg" alt="Interior of Target Restaurant family dining" class="g-img">
+</div>
+<div id="lightbox"><img id="lb-img"></div>
+<script>
+document.querySelectorAll('.g-img').forEach(i=>i.addEventListener('click',function(){
+  document.getElementById('lb-img').src=this.src;
+  document.getElementById('lightbox').style.display='flex';
+}));
+document.getElementById('lightbox').addEventListener('click',function(){this.style.display='none'});
+</script>

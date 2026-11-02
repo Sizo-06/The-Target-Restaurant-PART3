@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.assets/myfirststyle.css">
+    <title>services</title>
+</head>
+<body>
+    <header>
+     <img src="_images/the target.png" alt= The Target Restaurant" width="380">
+    </header>
+    <nav>
+        <a href="index.html">Home</a>|
+        <a href="about.html">about Us</a>|
+        <a href="services.html">services</a>|
+        <a href="contact.html">contact</a>|
+        <a href="enquiries.html">enquiries</a>|
+
+    </nav>
+    <section>
+
+    <!-- Services offered by The Target Restaurant -->
+     <div class="services-container">
+
+    <h2>Our Services</h2>
+
+    <div class="service-column">
+    <h3>Dine-In</h3>
+    <img src="_images/Dine in.jpg" alt="Dine-In Service" width="200">
+    <p>
+        Enjoy delicious meals in a comfortable and welcoming environment.
+        Our dine-in service is perfect for families, friends and special occasions.
+    </p>
+    </div>
+    <div class="service-column">
+    <h3>Food Delivery</h3>
+    <img src="_images/delivery.jpg" alt="Food Delivery Service" width="200">
+    <p>
+        Enjoy your favourite meals from The Target Restaurant at home or at work.
+        We provide convenient food delivery for our customers.
+    </p>
+    </div>
+    <div class="service-column">
+    <h3>Takeaway</h3>
+    <img src="_images/takeaway.jpg" alt="Takeaway Service" width="200">
+    <p>
+        Order your favourite meal and collect it from our restaurant.
+        Our takeaway service is convenient for customers who are on the go.
+    </p>
+    </div>
+    <div class="service-column">
+    <h3>Catering</h3>
+    <img src="_images/catering.jpg" alt="Catering Service" width="200">
+    <p>
+
+        We provide catering services for birthdays, weddings, meetings,
+        parties and other special events.
+    </p>
+    </div>
+    </div>
+
+</section>
+    
+</body>
+<footer>
+    <div class="footer-container">
+        <div class="quick-links">
+            <h3>quick-links</h3>
+
+         <nav>
+        <a href="index.html">Home</a>|
+        <a href="about.html">about Us</a>|
+        <a href="services.html">services</a>|
+        <a href="contact.html">contact</a>|
+        <a href="enquiries.html">enquiries</a>|
+
+    </nav>   
+        </div>
+
+        <div>
+            <p>&copy; 2026 the target restaurant. All Rights Reserved</p>
+    </div class="footer-container">
+</footer>
+</html>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+.tab-btn{padding:10px 20px; cursor:pointer; transition:0.3s;}
+.tab-btn.active{background:#c0392b; color:white;}
+.tab-content{display:none; animation: fade 0.5s;}
+@keyframes fade{from{opacity:0} to{opacity:1}}
+</style>
+
+<div class="tabs">
+  <button class="tab-btn active" data-tab="mains">Mains</button>
+  <button class="tab-btn" data-tab="starters">Starters</button>
+  <button class="tab-btn" data-tab="desserts">Desserts</button>
+</div>
+<div id="mains" class="tab-content" style="display:block">Grilled Chicken - R120</div>
+<div id="starters" class="tab-content">Chicken Wings - R65</div>
+<div id="desserts" class="tab-content">Malva Pudding - R45</div>
+
+<script>
+$(".tab-btn").click(function(){
+  $(".tab-content").hide();
+  $("#"+$(this).data("tab")).fadeIn(500);
+  $(".tab-btn").removeClass("active");
+  $(this).addClass("active");
+});
+</script>
